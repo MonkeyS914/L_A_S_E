@@ -1,0 +1,28 @@
+**Remove Duplicates from Sorted Array II**
+
+Follow up for "Remove Duplicates": What if duplicates are allowed at most twice?
+For example, given sorted array A = [1,1,1,2,2,3], your function should return length = 5, and A is now [1,1,2,2,3]
+
+##s
+	class Solution {
+    public:
+    int removeDuplicates(vector<int>& nums) {
+    	if (nums.size() <2) return nums.size();
+    	int index = 1;
+    	int occ = 0;
+    	for (int i = 1; i < nums.size(); i++) {
+    		if (nums[i] != nums[index-1]){
+    			nums[index++] = nums[i];
+    			occ = 0;
+    		}
+    		else{
+    			occ++;
+    			if(occ <2){
+       				index++; 
+    			}
+    			nums[index-1] = nums[i];
+    		}
+    	}		
+    		return index;
+       }
+    };
