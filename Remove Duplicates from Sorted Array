@@ -3,7 +3,7 @@ Do not allocate extra space for another array, you must do this in place with co
 For example, Given input array A = [1,1,2],
 Your function should return length = 2, and A is now [1,2].
 
-S:
+##S:##
 // Remove Duplicates from Sorted Array
 // 时间复杂度O(n)，空间复杂度O(1)
 class Solution {
