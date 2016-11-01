@@ -48,11 +48,11 @@ Your function should return length = 2, and A is now [1,2].
 
 	(5)使用迭代器访问元素.
 
-	vector<int>::iterator it;
-
-	for(it=vec.begin();it!=vec.end();it++)
-
-   	cout<<*it<<endl;
+    	vector<int>::iterator it;
+    
+    	for(it=vec.begin();it!=vec.end();it++)
+    
+       	cout<<*it<<endl;
 
 	(6)插入元素：    vec.insert(vec.begin()+i,a);在第i+1个元素前面插入a;
 
@@ -73,13 +73,13 @@ Your function should return length = 2, and A is now [1,2].
 
 	定义排序比较函数：
 
-	bool Comp(const int &a,const int &b)
-
-	{
-
+    	bool Comp(const int &a,const int &b)
+    
+    	{
+    
     	return a>b;
-
-	}
+    
+    	}
 
 	调用时:sort(vec.begin(),vec.end(),Comp)，这样就降序排序。
 
