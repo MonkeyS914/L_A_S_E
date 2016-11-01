@@ -8,33 +8,33 @@ Your function should return length = 2, and A is now [1,2].
 
 // 时间复杂度O(n)，空间复杂度O(1)
 
-class Solution {
-    public int removeDuplicates(int[] nums) {
-        if (nums.length == 0) return 0;
-
-        int index = 1;
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] != nums[index-1])
-                nums[index++] = nums[i];
-        }
-        return index;
-    }
-};
+    class Solution {
+    	public int removeDuplicates(int[] nums) {
+    		if (nums.length == 0) return 0;
+    		int index = 1;
+    		for (int i = 1; i < nums.length; i++) {
+   				if (nums[i] != nums[index-1])
+    			nums[index++] = nums[i];
+    		}
+    		return index;
+    	}
+    };
 
 ##PS:
   LeetCode用的是vector，顺便熟悉下vector的用法
-class Solution {
-public:
-    int removeDuplicates(vector<int>& nums) {
-    if (nums.size() == 0) return 0;
-        int index = 1;
-        for (int i = 1; i < nums.size(); i++) {
-            if (nums[i] != nums[index-1])
-                nums[index++] = nums[i];
-        }
-        return index;
-    }
-};
+
+    class Solution {
+    public:
+    	int removeDuplicates(vector<int>& nums) {
+    		if (nums.size() == 0) return 0;
+    		int index = 1;
+    		for (int i = 1; i < nums.size(); i++) {
+    			if (nums[i] != nums[index-1])
+    			nums[index++] = nums[i];
+    		}
+    		return index;
+    	}
+    };
 
 - 1 基本操作
 
