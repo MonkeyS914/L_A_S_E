@@ -1,0 +1,29 @@
+###Reverse String
+Write a function that takes a string as input and returns the string reversed.
+
+**Example**:
+Given s = "hello", return "olleh".
+
+##Solution
+    class Solution {
+    public:
+    string reverseString(string s) {
+        int i = s.size()-1;
+        int j = 0;
+        while(i>j){
+            char tem = s[i];
+            s[i] = s[j];
+            s[j] = tem;
+            i--;
+            j++;
+        }
+        return s;
+    }
+    };
+##PS
+还可以利用递归，将字符串分为前后两部分，分别逆序；
+
+元素交换还可以用
+
+1. swap(s[i],s[j]);
+2. 异或法，m=m&n; n=m&n; m=m&n;　
